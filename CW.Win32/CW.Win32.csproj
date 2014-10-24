@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E370B89A-4DFF-46AD-8822-6771E345BB72}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CW.Win32</RootNamespace>
+    <AssemblyName>CW.Win32</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CW.Core">
+      <HintPath>..\packages\CW.Core.0.1.0\lib\CW.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationAssociation.cs" />
+    <Compile Include="Atom.cs" />
+    <Compile Include="CachedInteropObject.cs" />
+    <Compile Include="ComObject.cs" />
+    <Compile Include="ComTaskMemory.cs" />
+    <Compile Include="Dwm.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="FileInformation.cs" />
+    <Compile Include="HotKeyManager.cs" />
+    <Compile Include="InteropObject.cs" />
+    <Compile Include="Migemo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screen.cs" />
+    <Compile Include="Shell\ContextMenu.cs" />
+    <Compile Include="Shell\FileOperation.cs" />
+    <Compile Include="Shell\FileOperationProgressSink.cs" />
+    <Compile Include="Shell\FileOperations.cs" />
+    <Compile Include="Shell\ImageList.cs" />
+    <Compile Include="Shell\ShellFolder.cs" />
+    <Compile Include="Shell\ShellIcon.cs" />
+    <Compile Include="Shell\ShellItem.cs" />
+    <Compile Include="Shell\ShellItemArray.cs" />
+    <Compile Include="Shell\ShellLink.cs" />
+    <Compile Include="Shell\ShellView.cs" />
+    <Compile Include="Structs.cs" />
+    <Compile Include="User32.cs" />
+    <Compile Include="Win32Api.cs" />
+    <Compile Include="Win32MenuItem.cs" />
+    <Compile Include="Win32Window.cs" />
+    <Compile Include="WindowUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
